@@ -569,7 +569,7 @@ def recognize_microphone(speech2text, tag, record_max_seconds=120, channels=1, r
                 sys.stdout.write('\n')
                 prev_lines = 0
 
-        nbests = [text for text, token, token_int, hyp in results]
+        nbests = results[0]
         prev_lines = progress_output(nbests[0], prev_lines)
 
     # Write debug wav as output file (will only be executed after shutdown)
